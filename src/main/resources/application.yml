@@ -1,6 +1,4 @@
 spring:
-  profiles:
-    active: local
   main:
     banner-mode: "off"
   jpa:
@@ -14,6 +12,8 @@ spring:
           import_files_sql_extractor: org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor
     database-platform: org.hibernate.dialect.H2Dialect
 
+---
+
 logging:
   pattern:
     console: '%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n'
@@ -23,6 +23,8 @@ logging:
       hibernate:
         0: warn
         SQL: warn
+
+---
 
 h2:
   console:
